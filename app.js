@@ -13,9 +13,9 @@ async function curatedPhotos() {
     }
   );
   const data = await dataFetch.json();
-  data.photo.forEach((photo) => {
+  data.photos.forEach((photo) => {
     const gallerryImage = document.createElement("div");
-    gallerryImage.classList.add(gallerry - img);
+    gallerryImage.classList.add("gallery-img");
     gallerryImage.innerHTML = `<img src= ${photo.src.large}></img>
     <p>${photo.photographer}</p>`;
     gallery.appendChild(gallerryImage);
